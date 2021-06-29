@@ -1,3 +1,2 @@
-# Pricing-Panel
-
-A web page designed for pricing schemes of a programming software 
+# Pricing Panel
+A web-page for different prices according to various package selected for the software. 

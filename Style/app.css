@@ -131,81 +131,94 @@ table {
 body {
   background-color: #0096c7;
   display: flex;
-  justify-content: space-evenly;
-  font-family: "Open Sans";
+  justify-content: center;
 }
-h1 {
-  font-weight: 300;
-  font-family: "Open Sans";
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-img {
-  width: 13rem;
-  height: 13rem;
-  margin-bottom: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 3rem;
-  border-bottom: 0.1rem solid #caf0f8;
-}
+
 .panel {
-  display: flex;
+  background-color: white;
   width: 60rem;
   height: 40rem;
-  background-color: white;
-  border-radius: 1rem;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 4rem;
-  max-width: 60rem;
-}
-/* .free, .community{ */
-/* border-right: 0.1rem solid #caf0f8; */
-/* box-sizing: border-box; */
-
-/* } */
-ul li {
-  font-size: 1.25rem;
-  font-family: "Open Sans";
-  margin-bottom: 0.25rem;
-  text-align: center;
-}
-h2 {
-  font-family: "Open Sans";
-  font-size: 2rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-.free,
-.community,
-.professional {
   display: flex;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 1rem;
+  margin: 3.5% auto;
+}
+.panel div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
+  flex-shrink: 1;
 }
 
-button {
-  width: 7rem;
+img {
+  max-width: 100%;
+  flex-shrink: 1;
+}
+
+.panel .details {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.panel .details ul {
+  margin: 1rem;
+}
+
+.panel .details ul li {
+  margin: 0.5rem;
+  text-align: center;
+  font-family: "Open Sans";
+  flex-shrink: 1;
+  font-size: 100%;
+}
+
+.panel .details h1 {
+  font-size: 250%;
+  font-family: "Open Sans";
+  flex-shrink: 1;
+  font-weight: 300;
+}
+
+.panel .details h2 {
+  font-size: 150%;
+  font-family: "Open Sans";
+  flex-shrink: 1;
+}
+
+.panel .details button {
+  width: 5rem;
   height: 3rem;
-  text-decoration: none;
-  color: #348efe;
-  margin-top: 1rem;
+  border: 2px solid #48cae4;
   background-color: white;
-  border: 1px solid #9dd1ff;
-  transition: background-color 200ms ease-in-out;
+  border-radius: 0.3rem;
+  transition: background-color 100ms ease-in-out;
+  margin-top: 1rem;
+  font-family: "Open Sans";
 }
 
-button:hover {
+.panel div button:hover {
   background-color: #caf0f8;
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 671px) {
+  .panel .details h1 {
+    font-size: 150%;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 442px) {
+  body {
+    margin: 0;
+  }
   .panel {
     flex-direction: column;
-    justify-content: center;
+    height: 90rem;
+    justify-content: flex-start;
+    /* margin-left: 0; */
   }
 }
